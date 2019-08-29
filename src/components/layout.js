@@ -5,13 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-
-import Nav from "./Nav"
-
-import "./layout.css"
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+import Theme from "./Theme";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,16 +22,15 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Nav />
+      <Theme>
         <main>{children}</main>
-      </>
+      </Theme>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
