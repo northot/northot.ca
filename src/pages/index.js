@@ -10,7 +10,7 @@ import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 import MainContent from "../components/sections/MainContent";
 import SpeakersSection from "../components/sections/SpeakersSection";
-import VRGuy from "../components/VR-Guy";
+import VRGuy from "../components/VRGuy";
 import Button from "../components/shared/Button";
 import SpeakerCardWrapper from "../components/SpeakerCardWrapper";
 import SpeakerCard from "../components/SpeakerCard";
