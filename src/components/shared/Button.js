@@ -6,6 +6,11 @@ import { useTheme } from "../../hooks";
 const PlainButton = styled.button`
   appearance: none;
   border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
   &:focus {
     outline: none;
   }

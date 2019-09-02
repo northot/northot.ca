@@ -16,10 +16,19 @@ function Section() {
   `);
 
   return (
-    <Img
-      style={{ maxHeight: 400 }}
-      fluid={data.placeholderImage.childImageSharp.fluid}
-    />
+    <div
+      css={`
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+      `}
+    >
+      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+    </div>
   );
 }
 

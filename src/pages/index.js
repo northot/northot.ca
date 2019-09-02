@@ -12,6 +12,8 @@ import MainContent from "../components/sections/MainContent";
 import SpeakersSection from "../components/sections/SpeakersSection";
 import VRGuy from "../components/VR-Guy";
 import Button from "../components/shared/Button";
+import SpeakerCardWrapper from "../components/SpeakerCardWrapper";
+import SpeakerCard from "../components/SpeakerCard";
 
 const IndexPage = () => (
   <Layout>
@@ -35,11 +37,13 @@ const IndexPage = () => (
         position: relative;
       `}
     >
+      <MainContent />
       <VRGuy />
-      <Container py>
+      <Container py="15%" px="20%">
         <div
           css={`
-            width: 50%;
+            width: 80%;
+            color: #646464;
           `}
         >
           <p>
@@ -54,19 +58,55 @@ const IndexPage = () => (
             hone skills from presentational, to conversational. To better
             ourselves and those around us.
           </p>
+        </div>
+        <div
+          css={`
+            display: flex;
+            justify-content: flex-end;
+          `}
+        >
           <Button>Explore Upcoming Events</Button>
         </div>
       </Container>
-      <MainContent />
     </div>
-    <div
+    <section
       css={`
-        margin-top: -12%;
-        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+        position: relative;
+        margin-top: -10%;
+        padding: 10% 5%;
       `}
     >
       <SpeakersSection />
-    </div>
+      <h2
+        css={`
+          margin: 0 0 0 auto;
+          width: 50%;
+          text-align: right;
+          font-size: 77px;
+        `}
+      >
+        <span
+          css={`
+            color: white;
+          `}
+        >
+          next NorthOT event
+        </span>
+        <span
+          css={`
+            color: red;
+          `}
+        >
+          .
+        </span>
+      </h2>
+      <SpeakerCardWrapper>
+        <SpeakerCard />
+        <SpeakerCard />
+        <SpeakerCard />
+      </SpeakerCardWrapper>
+      <p>Test</p>
+    </section>
   </Layout>
 );
 

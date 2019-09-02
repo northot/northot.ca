@@ -20,11 +20,15 @@ function Section() {
       css={`
         position: absolute;
         top: 0;
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
       `}
     >
       <Img
-        style={{ maxHeight: 400 }}
+        // style={{ maxHeight: 400 }}
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     </div>
