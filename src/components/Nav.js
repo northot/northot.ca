@@ -55,25 +55,49 @@ function Nav() {
           flex-direction: column;
         `}
       >
-        <FacebookIcon
-          height="20px"
+        <a
           css={`
-            margin: 0.1rem;
+            text-align: center;
           `}
-        />
-        <SlackIcon
-          height="40px"
+          href="http://facebook.northot.ca"
+          target="_blank"
+        >
+          <FacebookIcon
+            height="20px"
+            css={`
+              margin: 0.1rem;
+            `}
+          />
+        </a>
+        <a
           css={`
-            margin: 0.1rem;
+            text-align: center;
           `}
-        />
-        <GithubIcon
-          fill="#fff"
+          href="http://slack.northot.ca"
+          target="_blank"
+        >
+          <SlackIcon
+            height="40px"
+            css={`
+              margin: 0.1rem;
+            `}
+          />
+        </a>
+        <a
           css={`
-            margin: 0.1rem;
+            text-align: center;
           `}
-          height="20px"
-        />
+          href="https://www.github.com/northot"
+          target="_blank"
+        >
+          <GithubIcon
+            fill="#fff"
+            css={`
+              margin: 0.1rem;
+            `}
+            height="20px"
+          />
+        </a>
       </ul>
     </StyledNav>
   );

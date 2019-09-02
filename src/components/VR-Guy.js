@@ -16,11 +16,23 @@ function VRGuy(props) {
   `);
 
   return (
-    <Img
-      {...props}
-      style={{ maxHeight: 400 }}
-      fluid={data.placeholderImage.childImageSharp.fluid}
-    />
+    <div
+      css={`
+        position: absolute;
+        height: 500px;
+        width: 400px;
+        top: -8rem;
+        right: 0;
+        overflow: hidden;
+      `}
+    >
+      <Img
+        {...props}
+        imgStyle={{ objectFit: "contain" }}
+        style={{ right: "-7.5rem", maxHeight: 700 }}
+        fluid={data.placeholderImage.childImageSharp.fluid}
+      />
+    </div>
   );
 }
 

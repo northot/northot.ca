@@ -1,5 +1,11 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+`;
 
 const theme = {
   palette: {
@@ -9,7 +15,12 @@ const theme = {
   },
 };
 function Theme(props) {
-  return <ThemeProvider {...props} theme={theme} />;
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider {...props} theme={theme} />
+    </>
+  );
 }
 
 export default Theme;

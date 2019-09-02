@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Container({ children }) {
+export default function Container({ children, py }) {
   return (
     <div
       css={`
-        padding: 0 10%;
+        padding: ${py ? "10%" : "0"} 10%;
       `}
     >
       {children}

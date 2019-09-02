@@ -3,13 +3,15 @@ import React from "react";
 import Hero from "../components/Hero";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { H1 } from "../components/shared/Header";
 
+import MainTag from "../components/MainTag";
+import Container from "../components/Container";
 import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 import MainContent from "../components/sections/MainContent";
 import SpeakersSection from "../components/sections/SpeakersSection";
 import VRGuy from "../components/VR-Guy";
+import Button from "../components/shared/Button";
 
 const IndexPage = () => (
   <Layout>
@@ -24,42 +26,38 @@ const IndexPage = () => (
           height: 100px;
         `}
       />
-      <H1
-        css={`
-          text-transform: uppercase;
-          position: absolute;
-          bottom: -10px;
-          color: transparent;
-          -webkit-text-stroke: 3px white;
-          margin: 0;
-          line-height: 1;
-          padding-left: 5%;
-        `}
-      >
-        Barrie's Largest
-      </H1>
-
+      <MainTag />
       <Nav />
     </div>
     <div
       css={`
+        width: 100%;
         position: relative;
-        z-index: 1;
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
       `}
     >
+      <VRGuy />
+      <Container py>
+        <div
+          css={`
+            width: 50%;
+          `}
+        >
+          <p>
+            NorthOT is a tech focused meet up in the Barrie and surrounding
+            area. NorthOT wants to encourage tech North of Toronto by allowing
+            people of all experience the ability to interact, learn, educate and
+            make connections with companies and individuals.
+          </p>
+          <p>
+            NorthOT is intended for both beginners and experts, to be able to
+            share wisdom and ask questions without judgement. The ability to
+            hone skills from presentational, to conversational. To better
+            ourselves and those around us.
+          </p>
+          <Button>Explore Upcoming Events</Button>
+        </div>
+      </Container>
       <MainContent />
-      <div
-        style={{
-          zIndex: 10,
-          position: "absolute",
-          width: "30%",
-          right: 0,
-          top: -40,
-        }}
-      >
-        <VRGuy />
-      </div>
     </div>
     <div
       css={`
