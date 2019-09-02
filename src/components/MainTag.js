@@ -20,15 +20,13 @@ const MainH1 = styled(H1)`
   padding-left: 5%;
 `;
 
-function MainTag() {
-  return (
-    <MainH1>
-      <OutlinedText>Barrie's Largest</OutlinedText>
-      <br />
-      <RegularText>Tech meetup</RegularText>
-      <RegularText color="#e71e24">.</RegularText>
-    </MainH1>
-  );
-}
+const MainTag = () => (
+  <MainH1>
+    <OutlinedText>Barrie's Largest</OutlinedText>
+    <br />
+    <RegularText>Tech meetup</RegularText>
+    <RegularText color="#e71e24">.</RegularText>
+  </MainH1>
+);
 
 export default MainTag;
