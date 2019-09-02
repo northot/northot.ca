@@ -1,13 +1,7 @@
-import React from "react";
+import styled from "styled-components";
 
-export default function Container({ children, py = "0%", px = "10%" }) {
-  return (
-    <div
-      css={`
-        padding: ${py} ${px};
-      `}
-    >
-      {children}
-    </div>
-  );
-}
+const Container = styled.div`
+  padding: ${props => `${props.py || "0%"} ${props.px || "10%"}`};
+`;
+
+export default Container;
