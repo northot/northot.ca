@@ -17,7 +17,7 @@ function Hero() {
 
   return (
     <Img
-      style={{ maxHeight: 400 }}
+      style={{ minHeight: 300, maxHeight: 400 }}
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   );

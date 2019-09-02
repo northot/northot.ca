@@ -19,7 +19,6 @@ function VRGuy(props) {
     <div
       css={`
         position: absolute;
-        height: 500px;
         width: 400px;
         top: -8rem;
         right: 0;
