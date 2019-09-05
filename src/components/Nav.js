@@ -22,13 +22,11 @@ const NavListItem = styled.li`
     ${props => (props.isActive ? props.theme.palette.primary.main : "white")};
 `;
 
-function NavLinkItem({ isActive, ...props }) {
-  return (
-    <NavListItem isActive={isActive}>
-      <NavLink {...props} />.
-    </NavListItem>
-  );
-}
+const NavLinkItem = ({ isActive, ...props }) => (
+  <NavListItem isActive={isActive}>
+    <NavLink {...props} />.
+  </NavListItem>
+);
 
 const StyledNav = styled.nav`
   display: flex;
@@ -38,69 +36,53 @@ const StyledNav = styled.nav`
   right: 2%;
 `;
 
-function Nav() {
-  return (
-    <StyledNav>
-      <NavList>
-        <NavLinkItem isActive>NorthOT</NavLinkItem>
-        <NavLinkItem>speakers</NavLinkItem>
-        <NavLinkItem>location</NavLinkItem>
-        <NavLinkItem>register</NavLinkItem>
-        <NavLinkItem>give a talk</NavLinkItem>
-      </NavList>
-      <ul
-        css={`
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-        `}
-      >
-        <a
+const List = styled.div`
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+const SocialLink = styled.a`
+  text-align: center;
+`;
+
+const Nav = () => (
+  <StyledNav>
+    <NavList>
+      <NavLinkItem isActive>NorthOT</NavLinkItem>
+      <NavLinkItem>speakers</NavLinkItem>
+      <NavLinkItem>location</NavLinkItem>
+      <NavLinkItem>register</NavLinkItem>
+      <NavLinkItem>give a talk</NavLinkItem>
+    </NavList>
+    <List>
+      <SocialLink href="http://facebook.northot.ca" target="_blank">
+        <FacebookIcon
+          height="20px"
           css={`
-            text-align: center;
+            margin: 0.1rem;
           `}
-          href="http://facebook.northot.ca"
-          target="_blank"
-        >
-          <FacebookIcon
-            height="20px"
-            css={`
-              margin: 0.1rem;
-            `}
-          />
-        </a>
-        <a
+        />
+      </SocialLink>
+      <SocialLink href="http://slack.northot.ca" target="_blank">
+        <SlackIcon
+          height="40px"
           css={`
-            text-align: center;
+            margin: 0.1rem;
           `}
-          href="http://slack.northot.ca"
-          target="_blank"
-        >
-          <SlackIcon
-            height="40px"
-            css={`
-              margin: 0.1rem;
-            `}
-          />
-        </a>
-        <a
+        />
+      </SocialLink>
+      <SocialLink href="https://www.github.com/northot" target="_blank">
+        <GithubIcon
+          fill="#fff"
           css={`
-            text-align: center;
+            margin: 0.1rem;
           `}
-          href="https://www.github.com/northot"
-          target="_blank"
-        >
-          <GithubIcon
-            fill="#fff"
-            css={`
-              margin: 0.1rem;
-            `}
-            height="20px"
-          />
-        </a>
-      </ul>
-    </StyledNav>
-  );
-}
+          height="20px"
+        />
+      </SocialLink>
+    </List>
+  </StyledNav>
+);
 
 export default Nav;

@@ -22,7 +22,7 @@ const ButtonText = styled.span`
   padding-left: 0.5rem;
 `;
 
-function Button({ children }) {
+const Button = ({ children }) => {
   const theme = useTheme();
   return (
     <PlainButton>
@@ -30,6 +30,6 @@ function Button({ children }) {
       <ButtonText>{children}</ButtonText>
     </PlainButton>
   );
-}
+};
 
 export default Button;

@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-function Hero() {
+const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "hero.jpg" }) {
@@ -21,6 +21,6 @@ function Hero() {
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   );
-}
+};
 
 export default Hero;

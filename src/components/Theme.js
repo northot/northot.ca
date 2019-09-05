@@ -14,13 +14,12 @@ const theme = {
     },
   },
 };
-function Theme(props) {
-  return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider {...props} theme={theme} />
-    </>
-  );
-}
+
+const Theme = props => (
+  <>
+    <GlobalStyle />
+    <ThemeProvider {...props} theme={theme} />
+  </>
+);
 
 export default Theme;

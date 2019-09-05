@@ -1,8 +1,19 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import styled from "styled-components";
 
-function Section() {
+const ImageContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+`;
+
+const Section = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "upcoming.jpg" }) {
@@ -16,20 +27,10 @@ function Section() {
   `);
 
   return (
-    <div
-      css={`
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
-      `}
-    >
+    <ImageContainer>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-    </div>
+    </ImageContainer>
   );
-}
+};
 
 export default Section;
