@@ -3,6 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 const OuterContainer = styled.article`
+  transform: scale(0.9);
+  height: 50%;
+  width: 100%;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -42,10 +45,16 @@ const TalkTitle = styled.p`
   color: white;
 `;
 
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+`;
+
 const SpeakerCard = () => {
   return (
     <OuterContainer>
-      <img src="https://placeimg.com/450/370/people" />
+      <Image src="https://placeimg.com/450/370/people" />
       <TextContainer>
         <Title>
           <span>Jacob Amaral</span>

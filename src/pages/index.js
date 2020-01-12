@@ -14,6 +14,9 @@ import VRGuy from "../components/VRGuy";
 import Button from "../components/shared/Button";
 import SpeakerCardWrapper from "../components/SpeakerCardWrapper";
 import SpeakerCard from "../components/SpeakerCard";
+import BecomeSpeaker from "../components/sections/BecomeSpeaker";
+import Location from "../containers/Location";
+import Footer from "../containers/Footer";
 
 const IndexPage = () => (
   <Layout>
@@ -104,9 +107,12 @@ const IndexPage = () => (
         <SpeakerCard />
         <SpeakerCard />
         <SpeakerCard />
+        <SpeakerCard />
       </SpeakerCardWrapper>
-      <p>Test</p>
     </section>
+    <BecomeSpeaker />
+    <Location />
+    <Footer />
   </Layout>
 );
 

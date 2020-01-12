@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const ImageContainer = styled.div`
   position: absolute;
-  height: 500px;
   width: 400px;
   top: -8rem;
   right: 0;

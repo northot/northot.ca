@@ -16,17 +16,17 @@ const NavListItem = styled.li`
   font-weight: bold;
   font-family: "Poppins", sans-serif;
   padding-right: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   border-right: 1px solid
     ${props => (props.isActive ? props.theme.palette.primary.main : "white")};
-`;
 
-const NavLinkItem = ({ isActive, ...props }) => (
-  <NavListItem isActive={isActive}>
-    <NavLink {...props} />.
-  </NavListItem>
-);
+  &:after {
+    content: ".";
+    color: ${props =>
+      props.isActive ? props.theme.palette.primary.main : "white"};
+  }
+`;
 
 const StyledNav = styled.nav`
   display: flex;
@@ -49,11 +49,21 @@ const SocialLink = styled.a`
 const Nav = () => (
   <StyledNav>
     <NavList>
-      <NavLinkItem isActive>NorthOT</NavLinkItem>
-      <NavLinkItem>speakers</NavLinkItem>
-      <NavLinkItem>location</NavLinkItem>
-      <NavLinkItem>register</NavLinkItem>
-      <NavLinkItem>give a talk</NavLinkItem>
+      <NavListItem isActive>
+        <NavLink>NorthOT</NavLink>
+      </NavListItem>
+      <NavListItem>
+        <NavLink>speakers</NavLink>
+      </NavListItem>
+      <NavListItem>
+        <NavLink>location</NavLink>
+      </NavListItem>
+      <NavListItem>
+        <NavLink>register</NavLink>
+      </NavListItem>
+      <NavListItem>
+        <NavLink>give a talk</NavLink>
+      </NavListItem>
     </NavList>
     <List>
       <SocialLink href="http://facebook.northot.ca" target="_blank">
@@ -66,7 +76,7 @@ const Nav = () => (
       </SocialLink>
       <SocialLink href="http://slack.northot.ca" target="_blank">
         <SlackIcon
-          height="40px"
+          height="20px"
           css={`
             margin: 0.1rem;
           `}

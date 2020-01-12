@@ -2,9 +2,15 @@ import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  * {
+   box-sizing: border-box;
+  }
   body {
     font-family: "Poppins", sans-serif;
   }
+	p {
+		margin-top: 0;
+	}
 `;
 
 const theme = {
