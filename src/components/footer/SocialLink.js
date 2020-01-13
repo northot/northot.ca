@@ -8,7 +8,11 @@ const SocialLinkWrapper = styled(Flex).attrs({
   display: "inline-flex",
   alignItems: "center",
   textDecoration: "none",
-})``;
+})`
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
+`;
 
 const SocialLinkText = styled.p`
   color: #404042;
@@ -16,6 +20,10 @@ const SocialLinkText = styled.p`
   margin-bottom: 0;
   font-size: 1.1rem;
   font-weight: 900;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SocialLink = ({ icon, label, href }) => (

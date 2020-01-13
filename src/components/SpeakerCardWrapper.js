@@ -1,6 +1,13 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  max-width: 850px;
+  margin: 0 auto;
+`;
+
 const SpeakerCardWrapper = styled.div`
   width: 50%;
   flex-grow: 1;
@@ -10,9 +17,9 @@ const SpeakerCardWrapper = styled.div`
   display: flex;
 
   ${props =>
-    props.second &&
+    props.first &&
     css`
-      transform: translateY(25%);
+      transform: translateY(-25%);
     `}
 `;
 
@@ -28,17 +35,10 @@ const SpeakerCardWrapperMain = ({ children }) => {
   );
 
   return (
-    <div
-      css={`
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1000px;
-      `}
-    >
-      <SpeakerCardWrapper>{cols[0]}</SpeakerCardWrapper>
-      <SpeakerCardWrapper second>{cols[1]}</SpeakerCardWrapper>
-    </div>
+    <Container>
+      <SpeakerCardWrapper first>{cols[0]}</SpeakerCardWrapper>
+      <SpeakerCardWrapper>{cols[1]}</SpeakerCardWrapper>
+    </Container>
   );
 };
 

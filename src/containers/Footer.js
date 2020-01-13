@@ -12,6 +12,10 @@ const Container = styled.footer`
   padding: 0 7.5%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const FooterLinkText = styled.p`
@@ -23,27 +27,57 @@ const FooterLinkText = styled.p`
 `;
 
 const ContributeLink = styled.a`
+  display: block;
   color: #e62024;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
+const StyledCopy = styled.p`
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
+const SocialLinkContainer = styled(Flex)`
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 3.75%;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+`;
+
+const CopyContainer = styled(Box)`
+  flex: 1;
+  margin-right: 3.75%;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 const Footer = () => (
-  <Container>
-    <Box flex={1} mr="3.75%">
-      <p>&copy; NorthOT | Designed by Larche, developed by the community.</p>
+  <Container id="footer">
+    <CopyContainer>
+      <StyledCopy>
+        &copy; NorthOT | Designed by Larche, developed by the community.
+      </StyledCopy>
       <ContributeLink
         target="_blank"
         href="https://github.com/northot/northot.ca"
       >
         Contribute to this site
       </ContributeLink>
-    </Box>
-    <Flex
-      alignItems="center"
-      justifyContent="space-between"
-      flex={1}
-      ml="3.75%"
-    >
+    </CopyContainer>
+    <SocialLinkContainer>
       <SocialLink
         label="follow us"
         icon={<FacebookIcon height="2.5rem" />}
@@ -59,7 +93,7 @@ const Footer = () => (
         icon={<GithubIcon height="2.5rem" />}
         href="https://www.github.com/northot"
       />
-    </Flex>
+    </SocialLinkContainer>
   </Container>
 );
 

@@ -18,6 +18,12 @@ const MainH1 = styled(H1)`
   margin: 0;
   line-height: 0.9;
   padding-left: 5%;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    font-size: 15vw;
+    bottom: -29vw;
+  }
 `;
 
 const MainTag = () => (

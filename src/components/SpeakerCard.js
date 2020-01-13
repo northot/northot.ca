@@ -24,12 +24,15 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h6`
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center; */
+
   margin: 0;
-  font-size: 1.25rem;
-  display: flex;
+  font-size: 1.1rem;
   font-weight: 600;
-  align-items: center;
   color: white;
+  word-break: break-all;
 `;
 
 const Divider = styled.span`
@@ -51,17 +54,17 @@ const Image = styled.img`
   object-position: center;
 `;
 
-const SpeakerCard = () => {
+const SpeakerCard = ({ name, company, title }) => {
   return (
     <OuterContainer>
-      <Image src="https://placeimg.com/450/370/people" />
+      <Image src="https://placeimg.com/1000/800/people" />
       <TextContainer>
         <Title>
-          <span>Jacob Amaral</span>
+          {name}
           <Divider />
-          <span>We Trade HQ</span>
+          {company}
         </Title>
-        <TalkTitle>"Starting a lean tech company"</TalkTitle>
+        <TalkTitle>"{title}"</TalkTitle>
       </TextContainer>
     </OuterContainer>
   );

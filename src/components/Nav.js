@@ -9,7 +9,10 @@ const NavList = styled.ul`
   padding: 0;
 `;
 
-const NavLink = styled.a``;
+const NavLink = styled.a`
+  color: white;
+  text-decoration: none;
+`;
 
 const NavListItem = styled.li`
   text-align: right;
@@ -53,16 +56,18 @@ const Nav = () => (
         <NavLink>NorthOT</NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink>speakers</NavLink>
+        <NavLink href="#speakers">speakers</NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink>location</NavLink>
+        <NavLink href="#location">location</NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink>register</NavLink>
+        <NavLink href="http://register.northot.ca" target="_blank">
+          register
+        </NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink>give a talk</NavLink>
+        <NavLink href="#give-a-talk">give a talk</NavLink>
       </NavListItem>
     </NavList>
     <List>
@@ -70,7 +75,7 @@ const Nav = () => (
         <FacebookIcon
           height="20px"
           css={`
-            margin: 0.1rem;
+            margin: 0.1rem 0.5rem;
           `}
         />
       </SocialLink>
@@ -78,7 +83,7 @@ const Nav = () => (
         <SlackIcon
           height="20px"
           css={`
-            margin: 0.1rem;
+            margin: 0.1rem 0.5rem;
           `}
         />
       </SocialLink>
@@ -86,7 +91,7 @@ const Nav = () => (
         <GithubIcon
           fill="#fff"
           css={`
-            margin: 0.1rem;
+            margin: 0.1rem 0.5rem;
           `}
           height="20px"
         />
