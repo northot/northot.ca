@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `NorthOT Barrie Tech Meetup`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `NorthOT is Barrie's largest developer meetup. A great place to meet people interested in tech, `,
     author: `Chris Naismith`,
   },
   plugins: [

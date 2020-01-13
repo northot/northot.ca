@@ -21,6 +21,26 @@ const Wrapper = styled(BackgroundImage)`
   }
 `;
 
+const StyledButtonBox = styled(Box)`
+  margin-left: 5%;
+
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+    margin: 0;
+    text-align: center;
+  }
+`;
+
+const HeadingBox = styled(Box)`
+  margin-bottom: 5rem;
+  width: 70%;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+`;
+
 const NextEvent = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -36,7 +56,7 @@ const NextEvent = () => {
 
   return (
     <Wrapper id="speakers" fluid={data.placeholderImage.childImageSharp.fluid}>
-      <Box mb="5rem" width="70%" ml="auto">
+      <HeadingBox>
         <Header textAlign="right">
           <Box as="span" color="white">
             next NorthOT event
@@ -53,7 +73,7 @@ const NextEvent = () => {
         >
           august 31, 2019
         </Typography>
-      </Box>
+      </HeadingBox>
       <SpeakerCardWrapper>
         <SpeakerCard
           name="Jacob Amaral"
@@ -75,11 +95,11 @@ const NextEvent = () => {
           title="How to thrive as a freelancer"
           company="44 North Digital Marketing"
         />
-        <Box ml="5%">
+        <StyledButtonBox>
           <Button p="0" color="white" arrowColor="red">
             Register to Attend
           </Button>
-        </Box>
+        </StyledButtonBox>
       </SpeakerCardWrapper>
     </Wrapper>
   );

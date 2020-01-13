@@ -1,0 +1,28 @@
+.slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+.slick-dots {
+  bottom: -10px;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-prev,
+.slick-next {
+  color: white;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: white;
+}
+
+.slick-dots li button:before {
+  opacity: 1;
+  font-size: 1rem;
+  color: #808a94;
+}
