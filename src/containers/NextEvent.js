@@ -13,7 +13,7 @@ const Wrapper = styled(BackgroundImage)`
   padding: 10rem 7.5%;
   margin-top: -7.5vw;
   clip-path: polygon(0 calc(0% + 7.5vw), 100% 0, 100% 100%, 0% 100%);
-  margin-bottom: -25%;
+  /* margin-bottom: -25%; */
 
   @media (max-width: 768px) {
     padding: 2rem 7.5%;
