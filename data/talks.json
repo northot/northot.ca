@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Jenna Cox",
+    "talk": "Intro to Kotlin",
+    "image": "images/jenna.jpg",
+    "company": "Georgian College",
+    "title": "IMDW Student"
+  },
+  {
+    "name": "Steedan Crowe",
+    "talk": "Let's Start a Podcast!",
+    "image": "images/steedan.jpg",
+    "company": "44 North Digital Marketing",
+    "title": "Full Stack Developer and Dev Ops Manager"
+  },
+  {
+    "name": "Chris Naismith",
+    "talk": "Cross Tab Communication",
+    "image": "images/chris.png",
+    "company": "TygerShark",
+    "title": "Developer"
+  }
+]

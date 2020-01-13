@@ -1,5 +1,5 @@
 import React from "react";
-
+import Img from "gatsby-image";
 import styled from "styled-components";
 
 const OuterContainer = styled.article`
@@ -24,15 +24,10 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h6`
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center; */
-
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
   color: white;
-  word-break: break-all;
 `;
 
 const Divider = styled.span`
@@ -48,23 +43,23 @@ const TalkTitle = styled.p`
   color: white;
 `;
 
-const Image = styled.img`
+const Image = styled(Img)`
+  filter: grayscale(100%);
+  max-height: 400px;
   width: 100%;
   object-fit: cover;
   object-position: center;
 `;
 
-const SpeakerCard = ({ name, company, title }) => {
+const SpeakerCard = ({ name, company, talk, image }) => {
   return (
     <OuterContainer>
-      <Image src="https://placeimg.com/1000/800/people" />
+      <Image fluid={image.childImageSharp.fluid} />
       <TextContainer>
         <Title>
-          {name}
-          <Divider />
-          {company}
+          {name} - {company}
         </Title>
-        <TalkTitle>"{title}"</TalkTitle>
+        <TalkTitle>"{talk}"</TalkTitle>
       </TextContainer>
     </OuterContainer>
   );

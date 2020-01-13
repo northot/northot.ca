@@ -51,6 +51,23 @@ const NextEvent = () => {
           }
         }
       }
+      talks: allTalksJson {
+        edges {
+          node {
+            name
+            talk
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            company
+            title
+          }
+        }
+      }
     }
   `);
 
@@ -71,30 +88,13 @@ const NextEvent = () => {
           color="white"
           fontSize="2rem"
         >
-          august 31, 2019
+          november 28, 2019
         </Typography>
       </HeadingBox>
       <SpeakerCardWrapper>
-        <SpeakerCard
-          name="Jacob Amaral"
-          title="Starting a lean tech company"
-          company="WeTradeHQ"
-        />
-        <SpeakerCard
-          name="Suha Abdullah"
-          title="Back for your future!"
-          company="Shoof"
-        />
-        <SpeakerCard
-          name="Steedan Crowe"
-          title="How to thrive as a freelancer"
-          company="44 North Digital Marketing"
-        />
-        <SpeakerCard
-          name="Steedan Crowe"
-          title="How to thrive as a freelancer"
-          company="44 North Digital Marketing"
-        />
+        {data.talks.edges.map(({ node }) => (
+          <SpeakerCard key={node.title} {...node} />
+        ))}
         <StyledButtonBox>
           <Button p="0" color="white" arrowColor="red">
             Register to Attend
