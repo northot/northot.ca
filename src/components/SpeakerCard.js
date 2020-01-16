@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const OuterContainer = styled.article`
   transform: scale(0.9);
-  height: 50%;
+  height: 50vh;
+  /* height: 50%; */
   width: 100%;
   position: relative;
   display: inline-block;
