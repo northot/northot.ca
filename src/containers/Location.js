@@ -72,17 +72,14 @@ const Location = () => {
           </Box>
         </StyledH2>
         <StyledTypography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit
-          magna in elit ultricies, nec feugiat felis malesuada. Suspendisse sed
-          orci dignissim, euismod quam convallis, ullamcorper velit. Duis
-          molestie fermentum magna in maximus.
+          NorthOT is hosted at Georgian College, Barrie Ontario in N101a.
+          Fastest access to N building can be found by the Georgian Drive
+          entrance.
         </StyledTypography>
         <StyledTypography>
-          Nulla sed porta leo, vestibulum commodo leo. Vestibulum metus dui,
-          auctor id felis nec, fringilla tempor justo. Class aptent taciti
-          sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Duis ut ipsum a nunc tincidunt eleifend non a ipsum. Etiam
-          malesuada ultricies massa, eget pellentesque arcu fringilla non.
+          Parking is not covered, but typically will run around $5. The campus
+          uses a system called Honk, which can manage parking both from a mobile
+          device as well as several kiosks located across the campus.
         </StyledTypography>
       </CopyWrapper>
     </Container>
