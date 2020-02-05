@@ -63,7 +63,11 @@ const Description = () => {
         </strong>
       </StyledTypography>
       <Box display="flex" justifyContent="flex-end">
-        <Button>Explore Upcoming Events</Button>
+        <Button
+          onClick={() => (window.location = "http://register.northot.ca")}
+        >
+          Explore Upcoming Events
+        </Button>
       </Box>
     </Background>
   );

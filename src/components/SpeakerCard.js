@@ -47,20 +47,28 @@ const TalkTitle = styled.p`
 const Image = styled(Img)`
   filter: grayscale(100%);
   max-height: 400px;
+  height: 50vh;
   width: 100%;
   object-fit: cover;
   object-position: center;
 `;
 
-const SpeakerCard = ({ name, company, talk, image }) => {
+const SpeakerCard = ({ name, company, talk, image, tba }) => {
+  console.log(tba);
   return (
     <OuterContainer>
       <Image fluid={image.childImageSharp.fluid} />
       <TextContainer>
-        <Title>
-          {name} - {company}
-        </Title>
-        <TalkTitle>"{talk}"</TalkTitle>
+        {tba ? (
+          <Title>To Be Determined</Title>
+        ) : (
+          <>
+            <Title>
+              {name} - {company}
+            </Title>
+            <TalkTitle>"{talk}"</TalkTitle>
+          </>
+        )}
       </TextContainer>
     </OuterContainer>
   );

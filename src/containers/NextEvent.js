@@ -56,6 +56,7 @@ const NextEvent = () => {
       talks: allTalksJson {
         edges {
           node {
+            tba
             name
             talk
             image {
@@ -98,7 +99,12 @@ const NextEvent = () => {
           <SpeakerCard key={node.title} {...node} />
         ))}
         <StyledButtonBox>
-          <Button p="0" color="white" arrowColor="red">
+          <Button
+            onClick={() => (window.location = "http://register.northot.ca")}
+            p="0"
+            color="white"
+            arrowColor="red"
+          >
             Register to Attend
           </Button>
         </StyledButtonBox>

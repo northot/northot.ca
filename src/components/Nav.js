@@ -67,7 +67,7 @@ const Nav = () => (
         </NavLink>
       </NavListItem>
       <NavListItem>
-        <NavLink href="#give-a-talk">give a talk</NavLink>
+        <NavLink href="mailto:talk@northot.ca">give a talk</NavLink>
       </NavListItem>
     </NavList>
     <List>
