@@ -91,7 +91,7 @@ const NextEvent = () => {
           color="white"
           fontSize="2rem"
         >
-          november 28, 2019
+          february 27, 2020
         </Typography>
       </HeadingBox>
       <SpeakerCardWrapper>
