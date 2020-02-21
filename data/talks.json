@@ -7,6 +7,21 @@
     "title": "Senior Software Engineer  - Core Index"
   },
   {
+    "name": "Philip Tietjen",
+    "talk": "What the heck are up with Gatsby themes?",
+    "image": "images/phil.jpeg",
+    "company": "CBC",
+    "title": "Senior Developer"
+  },
+  {
+    "name": "Chris Naismith",
+    "talk": "Hacking Shopify - Writing an API in Liquid?!",
+    "image": "images/chris.png",
+    "company": "Tyger Shark",
+    "title": "Senior Developer"
+  },
+  {
+    "hidden": true,
     "tba": true,
     "image": "images/mystery.png"
   }

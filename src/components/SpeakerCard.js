@@ -54,7 +54,6 @@ const Image = styled(Img)`
 `;
 
 const SpeakerCard = ({ name, company, talk, image, tba }) => {
-  console.log(tba);
   return (
     <OuterContainer>
       <Image fluid={image.childImageSharp.fluid} />

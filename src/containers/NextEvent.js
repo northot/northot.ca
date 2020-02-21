@@ -59,6 +59,7 @@ const NextEvent = () => {
             tba
             name
             talk
+            hidden
             image {
               childImageSharp {
                 fluid(maxWidth: 500) {
@@ -95,9 +96,11 @@ const NextEvent = () => {
         </Typography>
       </HeadingBox>
       <SpeakerCardWrapper>
-        {data.talks.edges.map(({ node }) => (
-          <SpeakerCard key={node.title} {...node} />
-        ))}
+        {data.talks.edges
+          .filter(({ node }) => node.hidden !== true)
+          .map(({ node }) => (
+            <SpeakerCard key={node.title} {...node} />
+          ))}
         <StyledButtonBox>
           <Button
             onClick={() => (window.location = "http://register.northot.ca")}
