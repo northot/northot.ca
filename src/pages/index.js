@@ -1,12 +1,8 @@
 import React from "react";
 
-import Hero from "../components/Hero";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import MainTag from "../components/MainTag";
-import Logo from "../components/Logo";
-import Nav from "../components/Nav";
 import Description from "../containers/Description";
 import BecomeSpeaker from "../containers/BecomeSpeaker";
 import NextEvent from "../containers/NextEvent";
@@ -16,7 +12,7 @@ import Header from "../containers/Header";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="NorthOT - Barrie's Largest Dev Meetup" />
     <Header />
     <Description />
     <NextEvent />
